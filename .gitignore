@@ -1,0 +1,5 @@
+# This file is machine dependent, you should install the Arduino CLI and VSCode
+# extension yourself, configure the extension to use the CLI you downloaded, and
+# then this should be created automatically.
+.vscode/c_cpp_properties.json
+.vscode/arduino.json
