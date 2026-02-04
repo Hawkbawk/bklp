@@ -36,6 +36,9 @@ that I have on a breadboard, though I'm not sure how helpful it will be:
 
 <img src="./images/flashing_laser_pinning.jpg"/>
 
+Crucially, the red of the LED *must* be on the positive side, while the blue
+*must* be attache to ground. LED's are not flow agnostic apparently.
+
 And look ma, it does the thing!
 
 <img src="./images/look_ma_it_works.jpg"/>
@@ -50,6 +53,21 @@ VSCode tbh). The best set-up I've found so far is using Copilot in VSCode for
 help/questions/code writing, then using the actual IDE whenever you need to
 upload or get libraries or whatever. Works much better that way, annoying though
 it is.
+
+When you open the IDE (either by downloading it or by using the devShell in this repo),
+you'll want to:
+
+1. Open the [main sketch file](./main/main.ino)
+2. Attach your board. On my Linux machine, it was at /dev/ttyUSB0. For some reason, this wasn't
+   readable. You can fix this using the typical `sudo chmod +r /dev/ttyUSB0` command if it happens.
+3. Select the port in the IDE, then say that it's a "ESP32 Dev Module"
+4. Click the upload button in the top left.
+
+The code should now be running. A few things to note:
+
+* The devShell in this repo doesn't seem to support debugging. Not sure why yet. I have gdb,
+  but it just seems to crash instantly. Almost certainly some NixOS shenanigans or a missing package somewhere.
+* When using the serial monitor, use `New Line` and a baud rate of `115200`.
 
 ## Parts List
 

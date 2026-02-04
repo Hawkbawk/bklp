@@ -3,3 +3,4 @@
 # then this should be created automatically.
 .vscode/c_cpp_properties.json
 .vscode/arduino.json
+.direnv/
